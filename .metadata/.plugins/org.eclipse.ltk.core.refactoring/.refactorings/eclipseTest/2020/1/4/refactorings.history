@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Copy 5 elements to &apos;lib&apos;&#x0D;&#x0A;- Original project: &apos;eclipseTest&apos;&#x0D;&#x0A;- Destination element: &apos;lib&apos;&#x0D;&#x0A;- Original elements:&#x0D;&#x0A;     cos-05Nov2002.jar&#x0D;&#x0A;     gson-2.8.5.jar&#x0D;&#x0A;     ojdbc6.jar&#x0D;&#x0A;     taglibs-standard-impl-1.2.5.jar&#x0D;&#x0A;     taglibs-standard-spec-1.2.5.jar" description="Copy files" element1="WebContent/WEB-INF/lib/cos-05Nov2002.jar" element2="WebContent/WEB-INF/lib/gson-2.8.5.jar" element3="WebContent/WEB-INF/lib/ojdbc6.jar" element4="WebContent/WEB-INF/lib/taglibs-standard-impl-1.2.5.jar" element5="WebContent/WEB-INF/lib/taglibs-standard-spec-1.2.5.jar" files="5" flags="589830" folders="0" id="org.eclipse.jdt.ui.copy" policy="org.eclipse.jdt.ui.copyResources" stamp="1579667954819" target="/back_end_test/WebContent/WEB-INF/lib" units="0" version="1.0"/>
+</session>

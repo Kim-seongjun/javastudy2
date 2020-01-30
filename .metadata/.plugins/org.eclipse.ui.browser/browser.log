@@ -1,0 +1,27 @@
+
+12월 05, 2019 11:30:14.96 NEW SESSION
+12월 05, 2019 11:30:14.96 [5024:4532:1205/113014.966:ERROR:component_installer.cc(320)] Failed to read manifest or verify installation for CRLSet (C:\Users\14\AppData\Local\Google\Chrome\User Data\CertificateRevocation\5552).: 지정된 파일을 찾을 수 없습니다. (0x2)
+
+12월 06, 2019 09:29:42.11 NEW SESSION
+12월 06, 2019 09:29:42.11 [732:4836:1206/092942.110:ERROR:component_installer.cc(320)] Failed to read manifest or verify installation for Safety Tips (C:\Users\14\AppData\Local\Google\Chrome\User Data\SafetyTips\27).: 지정된 파일을 찾을 수 없습니다. (0x2)
+
+12월 11, 2019 14:37:17.79 NEW SESSION
+12월 11, 2019 14:37:17.79 [5932:1216:1211/143717.792:ERROR:component_installer.cc(320)] Failed to read manifest or verify installation for CRLSet (C:\Users\14\AppData\Local\Google\Chrome\User Data\CertificateRevocation\5563).: 지정된 파일을 찾을 수 없습니다. (0x2)
+
+12월 12, 2019 16:01:05.52 NEW SESSION
+12월 12, 2019 16:01:05.52 [4848:4256:1212/160105.526:ERROR:component_installer.cc(320)] Failed to read manifest or verify installation for CRLSet (C:\Users\14\AppData\Local\Google\Chrome\User Data\CertificateRevocation\5566).: 지정된 파일을 찾을 수 없습니다. (0x2)
+
+12월 20, 2019 09:48:13.72 NEW SESSION
+12월 20, 2019 09:48:13.72 [5876:5148:1220/094813.716:ERROR:component_installer.cc(320)] Failed to read manifest or verify installation for Safety Tips (C:\Users\14\AppData\Local\Google\Chrome\User Data\SafetyTips\37).: 지정된 파일을 찾을 수 없습니다. (0x2)
+
+1월 13, 2020 19:08:22.85 NEW SESSION
+1월 13, 2020 19:08:22.85 [3136:4576:0113/190822.843:ERROR:CONSOLE(97)] "Ignoring unauthorized client request from null", source: devtools://devtools/bundled/extensions/ExtensionServer.js (97)
+1월 13, 2020 19:09:23.71 [3136:4576:0113/190923.710:ERROR:CONSOLE(97)] "Ignoring unauthorized client request from null", source: devtools://devtools/bundled/extensions/ExtensionServer.js (97)
+1월 13, 2020 19:14:10.75 [3136:4576:0113/191410.753:ERROR:CONSOLE(97)] "Ignoring unauthorized client request from null", source: devtools://devtools/bundled/extensions/ExtensionServer.js (97)
+
+1월 14, 2020 09:17:49.35 NEW SESSION
+1월 14, 2020 09:17:49.35 [4368:5276:0114/091749.345:ERROR:CONSOLE(97)] "Ignoring unauthorized client request from null", source: devtools://devtools/bundled/extensions/ExtensionServer.js (97)
+1월 14, 2020 09:57:34.15 [4368:5276:0114/095734.159:ERROR:CONSOLE(97)] "Ignoring unauthorized client request from null", source: devtools://devtools/bundled/extensions/ExtensionServer.js (97)
+
+1월 14, 2020 14:48:00.64 NEW SESSION
+1월 14, 2020 14:48:00.64 [3416:3252:0114/144800.638:ERROR:CONSOLE(97)] "Ignoring unauthorized client request from null", source: devtools://devtools/bundled/extensions/ExtensionServer.js (97)

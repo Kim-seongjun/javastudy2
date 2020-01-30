@@ -1,0 +1,23 @@
+package com.icia.open.Controller;
+
+import java.io.IOException;
+
+import javax.servlet.ServletException;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+
+public class Home extends HttpServlet {
+	private static final long serialVersionUID = 1L;
+      
+	
+protected void doProcess(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+	request.setCharacterEncoding("utf-8");
+	String cmd=request.getServletPath();
+	System.out.println("cmd = "+cmd);
+	Forward fw=new Forward();
+	MemberMM mm=new MemberMM(request,response);
+	AdminMM am=new AdminMM(request,response);
+	ReservationMM rm=new ReservationMM(request,response);}
+}

@@ -1,0 +1,160 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+	pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script
+	src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<style>
+#header {
+	background-color: #58557A;
+	text-align: center;
+	height: 100px;
+}
+
+#nav {
+	background-color: #9D9BCC;
+	height: 50px;
+}
+
+table {
+	border: 1px solid #373D40;
+	text-align: center;
+	margin-left: 38%;
+}
+
+tr td {
+	border: 1px solid #373D40;
+}
+
+input {
+	/* 	border-left: none; */
+	/* 	border-right: none; */
+	/* 	border-top: none; */
+	height: 40px;
+	font-size: 100%;
+}
+
+#div_join {
+	background-color: #EDEDF7;
+	height: 500px;
+}
+
+#footer {
+	text-align: center;
+	background-color: #778268;
+	height: 100px;
+}
+</style>
+</head>
+<body>
+	<header>
+		<div id="header">
+			<jsp:include page="header.jsp" />
+		</div>
+	</header>
+	<nav>
+		<div id="nav">
+			<jsp:include page="nav.jsp" />
+		</div>
+	</nav>
+	<section>
+		
+		<div id="div_join">
+		<div>
+			<div style="text-align: center;"><b style="font-size: 30px;">홈쇼핑 회원 등록</b></div>
+		</div>
+			<form action="#">
+				<table>
+					<tr>
+						<td>회원번호(자동발생)</td>
+						<td><input type="text" name="custno" maxlength="20" id="custno" value="${custno}"></td>
+					</tr>
+					<tr>
+						<td>회원성명</td>
+						<td><input type="text" name="custname" maxlength="20" id="custname"></td>
+					</tr>
+					<tr>
+						<td>회원전화</td>
+						<td><input type="text" name="phone" maxlength="20" id="phone"></td>
+					</tr>
+					<tr>
+						<td>회원주소</td>
+						<td><input type="text" name="address" maxlength="20" id="address"></td>
+					</tr>
+					<tr>
+						<td>가입일자</td>
+						<td><input type="text" name="joindate" maxlength="20" id="joindate" value="${time1}"></td>
+					</tr>
+					<tr>
+						<td>고객등급(A:vip,B:일반,C:직원)</td>
+						<td><input type="text" name="grade" maxlength="20" id="grade"></td>
+					</tr>
+					<tr>
+						<td>도시코드</td>
+						<td><input type="text" name="city" maxlength="20" id="city"></td>
+					</tr>
+					<tr>
+						<td colspan="2">
+						<input type="submit" id="btn" value="회원가입" formaction="memberjoin">
+						<input type="submit" id="select" value="조회" style="margin-left: 30px;" formaction="memberlist">
+						</td>
+					</tr>
+				</table>
+			</form>
+		</div>
+	</section>
+	<footer>
+		<div id="footer">
+			<jsp:include page="footer.jsp" />
+		</div>
+	</footer>
+	<script>
+	$("#btn").click(function() {
+		   if ($("#custno").val() == "") {
+		      alert("회원번호.");
+		      $("#custno").focus();
+		      $("#btn").prop("type", "button");
+		   }
+		   else if($("#custname").val() == ""){
+		      alert("회원성명이 입력되지않았습니다");
+		      $("#custname").focus();
+		      $("#btn").prop("type", "button");
+		   }
+		   else if($("#phone").val() == ""){
+		      alert("전화번호를 입력해주세요.");
+		      $("#phone").focus();
+		      $("#btn").prop("type", "button");
+		   }
+		   else if($("#address").val() == ""){
+		      alert("주소를 입력해주세요.");
+		      $("#address").focus();
+		      $("#btn").prop("type", "button");
+		   }
+		   else if($("#joindate").val() == ""){
+		      alert("가입일을 입력해주세요.");
+		      $("#joindate").focus();
+		      $("#btn").prop("type", "button");
+		   }
+		   else if($("#grade").val() == ""){
+		      alert("등급을 입력해주세요.");
+		      $("#grade").focus();
+		      $("#btn").prop("type", "button");
+		   }
+		   else if($("#city").val() == ""){
+		      alert("도시코드를 입력해주세요.");
+		      $("#city").focus();
+		      $("#btn").prop("type", "button");
+		   }
+		   else{
+		      alert("회원등록이 완료되었습니다.");
+		      $("#btn").prop("type", "submit");
+		   }
+		   
+		});
+	</script>
+</body>
+</html>

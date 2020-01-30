@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Move 5 packages to &apos;Collection&apos;&#x0D;&#x0A;- Original project: &apos;Collections&apos;&#x0D;&#x0A;- Destination element: &apos;Collection&apos;&#x0D;&#x0A;- Original elements:&#x0D;&#x0A;     Collections/src/vector&#x0D;&#x0A;     Collections/src/exercise2&#x0D;&#x0A;     Collections/src/hashMap&#x0D;&#x0A;     Collections/src/list&#x0D;&#x0A;     Collections/src/hashSet&#x0D;&#x0A;- Update references to refactored element" description="Move packages" element1="/src&lt;vector" element2="/src&lt;exercise2" element3="/src&lt;hashMap" element4="/src&lt;list" element5="/src&lt;hashSet" flags="589830" fragments="5" id="org.eclipse.jdt.ui.move" policy="org.eclipse.jdt.ui.movePackages" stamp="1577176166467" target="/chapter/Collection" version="1.0"/>
+</session>

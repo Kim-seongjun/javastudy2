@@ -1,0 +1,12 @@
+package com.icia.open.Bean;
+
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+public class Forward {
+
+	public Forward(HttpServletRequest request, HttpServletResponse response) {
+		// TODO Auto-generated constructor stub
+	}
+
+}

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<h1>joinForm.html_회원가입 화면</h1>
+	<hr>
+	<form name="frm" action="memberjoin" method="post">
+		ID:<input type="text" name="id" id="id"><br>
+		PW:<input type="password" name="pw" id="pw"><br>
+		NAME:<input type="text" name="name"><br>
+		BIRTH:<input type="text" name="birth"><br>
+		PHONE:<select name="first">
+			<option>010</option>
+			<option>011</option>
+			<option>017</option>
+		</select>
+		<input type="text" name="second">-
+		<input type="text" name="third"><br>
+		<button>회원가입</button>
+	</form>
+</body>
+<script>
+	var frm= document.frm;
+	console.log(frm);
+	console.log(frm.length);
+	if(frm[1].value==""){
+		alert(frm[1].id+"를 입력하세요.");
+	}
+</script>
+
+</html>

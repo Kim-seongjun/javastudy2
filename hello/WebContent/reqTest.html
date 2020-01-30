@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+</head>
+<body>
+<h1>Request Test</h1>
+	<form name="" action="reqTest1.jsp" method="post" onsubmit="return check()">
+	
+	이름:<input type="text" id="name" name="name"><br>
+	성별:남<input type="radio" class="gender" name="gender" value="male">
+		여<input type="radio" class="gender" name="gender" value="female"><br>
+	취미:독서<input type="checkbox" name="hobby" value="독서">
+		게임<input type="checkbox" name="hobby" value="게임">
+		영화<input type="checkbox" name="hobby" value="영화"><br>
+	전화번호:<input type="text" id="phone" name="phone">
+	
+	<input type="submit" value="회원가입">	
+	
+	</form>
+</body>
+<script>
+	function check() {
+		//console.log($(".gender").is(":checked"));
+		//:checked(체크된 input요소선택)
+		if($("#name").val()==""){
+			$("#name").focus();
+			alert("이름을 입력하세요");
+			return false;
+		}else if($(".gender").is(":checked")==false){
+			alert("성별 선택해주세요.");
+			return false;
+		}else if($("#phone").val()==""){
+			$("#phone").focus();
+			alert("전화번호를 입력해주세요.");
+			return false;
+		}
+		var phoneNum=$("#phone").val();
+		//var reg=/^01(?:0|1|[6-9])-(?:\d{3}|\d{4})-\d{4}$/;
+		//alert(reg.test(phoneNum));// true or false
+		if(reg.test(phoneNum)){
+			return true;
+			//document.joinFrm.submit(); //일반버튼
+			//$("form").submit(); //일반버튼
+		}else{
+			alert("잘못된 전화번호 입니다.");
+			return false;
+			
+		}
+		//return false; //서버로 전송
+	}
+</script>
+</html>

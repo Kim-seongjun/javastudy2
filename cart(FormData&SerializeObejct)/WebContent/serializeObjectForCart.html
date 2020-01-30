@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<script	src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<script src="jquery.serializeObject.js"></script>
+<script>
+	$(function() {
+		$("button").on("click",	function() {
+					var $form = $("<form></form>");
+					$form.attr("action", "order");
+					var $divs = $("div");
+					//$.each($divs, function(idx, div) {
+					$divs.each(function(){	
+						if($(this).children(".check").is(":checked")) {
+							$("<input>").attr("name", "pcode").val(
+									$(this).children(".pcode").val()).appendTo($form);
+							$("<input>").attr("name", "qty").val(
+									$(this).children(".qty").val()).appendTo($form);
+						}
+					});
+					$form.appendTo("body");
+					//$form.submit(); //서버로 폼데이터를 쿼리스트링으로 전송
+					
+					//jquery.serializeObject.js  plug-in필요함..
+					console.log($($form).serializeObject()); //js객체 생성
+					//폼 전체를 SerializeObject 라이브러리를 사용하여 js객체 변환후 JSON으로 다시 변환한다.
+					                    //JSON <------------- js객체					
+					var jsonData = JSON.stringify($form.serializeObject());
+					//console.log(jsonData);
+							
+					  $.ajax({
+						url : "order",
+						type : "post", //get가능
+						data : {data : jsonData	},
+						//스프링에서 data:jsonStr 이렇게 보내면 스프링이 json을 까보기 때문에 아래처럼 설정해야됨..
+						//contentType:'application/json; charset=UTF-8',  
+						dataType : "html", //생략가능
+						success : function(data) {
+							console.log(data);
+						},
+						error : function(error) {
+							console.log(error);
+						}
+					});  //ajax End 
+					
+				}); //event function End
+
+	});//ready End
+</script>
+<title>Insert title here</title>
+</head>
+<body>
+		<div>
+			<input type="hidden" class="pcode" value="new1"><input type="checkbox" class="check"> <span>로지텍
+				M310</span> <span>판매가 : 8400원</span> 
+				개수:<input type="text" class="qty" value="1">
+				
+		</div>
+		<div>
+			<input type="hidden" class="pcode" value="best1"> <span>로지텍
+				M102</span> <span>판매가 : 11400원</span> 개수:<input type="text" class="qty"
+				value="2"> <input type="checkbox" class="check">
+		</div>
+		<div>
+			<input type="hidden" class="pcode" value="best2"> <span>로지텍
+				M270</span> <span>판매가 : 9700원</span> 개수:<input type="text" class="qty"
+				value="3"> <input type="checkbox" class="check">
+		</div>
+		<button type="button">전송</button>
+	</body>
+</html>

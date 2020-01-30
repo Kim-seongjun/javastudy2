@@ -1,0 +1,112 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+	pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style>
+#header {
+	background-color: #58557A;
+	text-align: center;
+	height: 100px;
+}
+
+#nav {
+	background-color: #9D9BCC;
+	height: 50px;
+}
+
+table {
+	border: 1px solid #373D40;
+	text-align: center;
+	margin-left: 38%;
+}
+
+tr td {
+	border: 1px solid #373D40;
+}
+
+input {
+	/* 	border-left: none; */
+	/* 	border-right: none; */
+	/* 	border-top: none; */
+	height: 40px;
+	font-size: 100%;
+}
+
+#div_join {
+	background-color: #EDEDF7;
+}
+
+#footer {
+	text-align: center;
+	background-color: #778268;
+	height: 100px;
+}
+</style>
+</head>
+<body>
+	<header>
+		<div id="header">
+			<jsp:include page="header.jsp" />
+		</div>
+	</header>
+	<nav>
+		<div id="nav">
+			<jsp:include page="nav.jsp" />
+		</div>
+	</nav>
+	<section>
+		<div>
+			<h1 style="text-align: center;">홈쇼핑 회원 등록</h1>
+		</div>
+		<div id="div_join">
+			<form action="#">
+				<table>
+					<tr>
+						<td>회원번호(자동발생)</td>
+						<td><input type="text" name="id" maxlength="20" id="id" value="${custno}"></td>
+					</tr>
+					<tr>
+						<td>회원성명</td>
+						<td><input type="text" name="name" maxlength="20" id="name"></td>
+					</tr>
+					<tr>
+						<td>회원전화</td>
+						<td><input type="text" name="phone" maxlength="20" id="phone"></td>
+					</tr>
+					<tr>
+						<td>회원주소</td>
+						<td><input type="text" name="add" maxlength="20" id="add"></td>
+					</tr>
+					<tr>
+						<td>가입일자</td>
+						<td><input type="text" name="date" maxlength="20" id="date"></td>
+					</tr>
+					<tr>
+						<td>고객등급(A:vip,B:일반,C:직원)</td>
+						<td><input type="text" name="id" maxlength="20" id="id"></td>
+					</tr>
+					<tr>
+						<td>도시코드</td>
+						<td><input type="text" name="code" maxlength="20" id="code"></td>
+					</tr>
+					<tr>
+						<td colspan="2"><input type="submit" value="회원가입">
+						<input type="submit" value="조회" style="margin-left: 30px;"></td>
+					</tr>
+				</table>
+			</form>
+		</div>
+	</section>
+	<footer>
+		<div id="footer">
+			<jsp:include page="footer.jsp" />
+		</div>
+	</footer>
+	<script>
+		
+	</script>
+</body>
+</html>
